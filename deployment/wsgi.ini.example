@@ -1,0 +1,6 @@
+[uwsgi]
+socket = :8000
+home = /Users/xupeng/.virtualenvs/s1env
+; chdir = /Users/xupeng/bitbucket/s1-flask
+module = s1.wsgi:app
+logto = /tmp/logs/s1.log
