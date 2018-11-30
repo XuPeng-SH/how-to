@@ -13,7 +13,7 @@ Nginx+uwsgi+flask
 3. 创建wsgi.ini [wsgi.ini.example](./wsgi.ini.example)
 4. 运行: uwsgi --ini wsgi.ini
 5. MacOS下：
-   ```cd /usr/local/etc/nginx;``` 加入如下配置到nginx.conf[nginx.conf.example](nginx.conf.example)
+   ```cd /usr/local/etc/nginx;``` 加入如下配置到nginx.conf [nginx.conf.example](nginx.conf.example)
    ```
    server {
         listen 80;
