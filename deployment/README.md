@@ -9,10 +9,10 @@ MacOS下配置 `Nginx+UWSGI+Flask`
     ```
     app = create_app()
     ```
-3. 创建wsgi.ini [wsgi.ini.example](./wsgi.ini.example)
+3. 创建wsgi.ini [wsgi.ini.example](./nginx_simple_example/wsgi.ini)
 4. 运行: ```uwsgi --ini wsgi.ini```
 5. MacOS下：
-   ```cd /usr/local/etc/nginx;``` 加入如下配置到nginx.conf [nginx.conf.example](nginx.conf.example)
+   ```cd /usr/local/etc/nginx;``` 加入如下配置到nginx.conf [nginx.conf.example](./nginx_simple_example/nginx.conf)
    ```js
    server {
         listen 80;
