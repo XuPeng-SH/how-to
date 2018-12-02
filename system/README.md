@@ -58,3 +58,30 @@ child process 29888
 
 ```os.execlpe(program, cmdarg1, cmdarg2, …, cmdargN, env)```
 在”p”和”e”的组合模式下,基本的”l”执行形式,需要传入可执行的程序名,以及用来运行程序的命令行多个字符参数.最后还要传入运行新程序的需要的环境变量env字典参数.运行新程序的搜索路径为当前文件的搜索路径.
+
+new_process.py
+```js
+import os
+print(f'new process getpid={os.getpid()}')
+```
+entry.py
+```js
+import os
+print(f'entry process getpid={os.getpid()}')
+
+pid = os.fork()
+if pid == 0:
+    # 子进程
+    print(f'child process pid={pid} getpid={os.getpid()}')
+    # 用新的执行程序替代子进程，进程号不变
+    os.execlp('python', 'python', 'new_process.py')
+    # 与execlp一样的效果
+    # os.execvp('python', ('python', 'new_process.py'))
+    assert False, '永远不能执行到这里'
+```
+执行结果
+```js
+entry process getpid=288888
+child process pid=0 getpid=288889
+new process getpid=288889
+```
