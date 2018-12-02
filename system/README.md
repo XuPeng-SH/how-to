@@ -27,7 +27,7 @@ else:
 ```
 运行结果如下
 ```js
-    pid=0 getpid=29888
-    pid=29887 getpid=29887
-    child process 29888
+pid=0 getpid=29888
+pid=29887 getpid=29887
+child process 29888
 ```
