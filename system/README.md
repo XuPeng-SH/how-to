@@ -6,11 +6,11 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Fork与exec家族
+## Fork与exec家族 [fork_exec_example](./fork_exec_example)
 1. ```fork()```调用后会创建一个新的子进程,这个子进程是原父进程的副本.子进程可以独立父进程外运行.
 2. ```fork()```是一个很特殊的方法,一次调用,两次返回
 3. ```fork()```它会返回2个值,一个值为0,表示在子进程返回;另外一个值为非0,表示在父进程中返回子进程ID
-[fork_exec_example](./fork_exec_example)
+
 ```js
 import os
 
