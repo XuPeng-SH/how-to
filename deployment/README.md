@@ -8,10 +8,6 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
-
-- [Nginx简单配置例子](#markdown-header-nginx%E7%AE%80%E5%8D%95%E9%85%8D%E7%BD%AE%E4%BE%8B%E5%AD%90)
-
 ## Nginx简单配置例子
 MacOS下配置 `Nginx+UWSGI+Flask`
 1. ```pip install uwsgi; brew install nginx```
