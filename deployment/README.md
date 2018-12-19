@@ -39,9 +39,11 @@ MacOS下配置 `Nginx+UWSGI+Flask`
 ## 如何在已有镜像上加装环境生成新的镜像
 CentOS加装ssh服务举例
 1. ```docker pull centos:6.6```
-2. ```docker run -it centos:6.6 bash
-      yum install ssh
-      exit```
+2. ```
+docker run -it centos:6.6 bash
+yum install ssh
+exit
+```
 3. ```docker ps -a``` 找出container ID, ```docker commit $containerID centos-ssh```生成新的centos-ssh镜像
 
 ## 如何ssh到容器
