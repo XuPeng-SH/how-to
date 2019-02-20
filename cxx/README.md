@@ -3,6 +3,7 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [如何使用LLDB调试进程的子进程](#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8lldb%E8%B0%83%E8%AF%95%E8%BF%9B%E7%A8%8B%E7%9A%84%E5%AD%90%E8%BF%9B%E7%A8%8B)
+- [如何获取库相关路径](#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E5%BA%93%E7%9B%B8%E5%85%B3%E8%B7%AF%E5%BE%84)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -14,3 +15,8 @@
 lldb process attach -n myApp -w
 ```
 4. 父进程lldb继续运行，触发子进程，子进程将会在新开的Terminal里进入调试模式
+
+## 如何获取库相关路径
+```js
+echo | clang -v -E -x c++ -
+```
