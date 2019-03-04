@@ -13,8 +13,10 @@ echo | clang -v -E -x c++ -
 ```
 
 ## c中如何实现亚秒精度睡眠
+### 参考postgresql源码pg_usleep的实现
 ```js
 #include <sys/select.h>
+
 timeout->sec = 1;
 timeout->usec = 20303;
 select(0, NULL, NULL, timeout);
