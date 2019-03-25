@@ -43,3 +43,6 @@ CentOS加装ssh服务举例
 主机ssh本地容器示例
 1. ```docker run -d -p 8888:22 centos-ssh sshd -D```
 2. 本地终端输入：```ssh root@127.0.0.1 -p 8888```
+
+## uWSGI部署keras服务
+1. lazy-apps = true # keras服务可能会阻塞
