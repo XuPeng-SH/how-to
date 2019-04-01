@@ -46,3 +46,10 @@ CentOS加装ssh服务举例
 
 ## uWSGI部署keras服务
 1. lazy-apps = true # keras服务可能会阻塞
+
+## 怎么生成Self-Signed证书
+```
+openssl req \
+       -newkey rsa:2048 -nodes -keyout registry.key \
+       -x509 -days 365 -out registry.crt
+```
